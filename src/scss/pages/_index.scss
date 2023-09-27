@@ -561,7 +561,8 @@
         display: block;
         &-body {
             li{
-                @extend .ff--ubuntu;
+                
+                font-family: 'Ubuntu';
                 font-weight: 300;
             }
         }

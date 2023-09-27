@@ -18767,6 +18767,10 @@ a {
   .accordion {
     display: block;
   }
+  .accordion-body li {
+    font-family: "Ubuntu";
+    font-weight: 300;
+  }
   .homepage-top_banner h1, .homepage-top_banner .h1 {
     font-size: 30px;
   }
