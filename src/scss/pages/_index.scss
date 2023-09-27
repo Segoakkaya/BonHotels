@@ -345,8 +345,9 @@
     padding-top: 5rem;
     padding-bottom: 20rem;
         &_btn{
-        width: 418px !important;
-        height: 76px !important;
+        max-width: 418px;
+        width: 100%;
+        height: 76px;
         background-color: $color--btn;
         padding-top: 25px;
         border: 0px;
@@ -553,6 +554,9 @@
     .ready{
         padding-top: 5rem;
         padding-bottom: 2rem;
+        &-btn{
+            max-width: 200px;
+        }
     }
     .footer{
         display: none;
@@ -566,13 +570,20 @@
                 font-weight: 300;
             }
         }
+        .accordion-button::after{
+            filter: brightness(0) invert(1);
+        }
     }
     .homepage-top_banner{
+        .homepage_title{
+            top: 200px;
+            text-wrap: wrap;
+        }
         h1{
-            font-size: 30px;
+            font-size: 50px;
         }
         h3{
-            font-size: 10px;
+            font-size: 20px;
         }
          .nav-btn{
             width: 200px;
@@ -623,6 +634,8 @@
         }
     }
 
-
+    .accordion-collapse{
+        padding: 0px;
+    }
 }
   @include media-breakpoint-down(def) { }
