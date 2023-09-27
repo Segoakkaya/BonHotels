@@ -1,0 +1,627 @@
+.content{
+    &_item{
+        padding: 20px;
+        font-size: 24px;
+        line-height: normal;
+        &::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            margin-top: 5px;
+            background: $color--fontC;
+            display: block;
+            transition: 0.5s;
+        }
+        &:hover::after{
+            width: 100%;
+        }
+        a{
+            @extend .ff--ubuntu;
+            @extend .font-weight--500;
+            color: $color--fontC;
+            text-decoration: none;
+        }
+        &_search{
+            font-size: 16px;
+            padding: 24px;
+            width: 16px;
+            height: 16px;
+            color:$color--fontC;
+        }
+    }
+}
+.search{
+        margin: 0px;
+        background: none;
+        @extend .ff--ubuntu;
+        font-size: 20px;
+        color: $color--fontC;
+        width: 700px;
+        border: 0px;
+        border-radius: 0px;
+        border-bottom: 2px solid #111;
+        margin-bottom: 10px;
+        outline: none;
+        text-transform: uppercase;
+}
+#searchBox{
+    transition: all .5s ease-in-out;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.showSearch{
+    transition: all .5s ease-in-out;
+    height: 55px !important;
+    opacity: 1 !important;
+    visibility: visible !important  ;
+}
+.hidden_box{
+    transition: all .5s ease-in-out;
+}
+
+.radio{
+    width: 100%;
+    display: flex;
+    height: 25px;
+    align-items: center;
+    input{
+        margin-right: 10px;
+        width: 25px;
+        height: 20px;
+    }
+}
+.nav-menu{
+    padding: 25px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend .ff--ubuntu;
+    color: $color--btn;
+    flex-wrap: wrap;
+    gap: 15px;
+    &-btn{
+        
+        font-size: 20px;
+        background-color: #DFAA5B;
+        padding-top: 20px;
+        width: 192px;
+        border: 0px;
+        border-radius: 12px;
+        color: white;
+        font-family: "Ubuntu", sans-serif;
+        @extend .font-weight--100;
+        text-decoration: none;
+        height: 60px;
+        text-align: center;
+        transition: all .5s ease-in-out;
+        &:hover{
+            background-color: rgb(255, 72, 39);
+            color: white;
+        }
+    }
+    .multiselect{
+        width: 192px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        background-image: url('./assets/img/vector.svg');
+        background-size: 20px 20px;
+        &-all{
+            padding: 0;
+             height: 100%;
+             display: block;
+        }
+        &-search{
+            margin: 0px;
+            border-radius: 0px;
+            color: $color--fontC;
+            @extend .ff--ubuntu;
+            &:focus{
+                border-color: transparent;
+                box-shadow: 0 0 0 0.05rem rgb(223 170 91);
+            }
+        }
+        &-container{
+            li{
+                color: $color--fontC;
+                @extend .ff--ubuntu;
+                font-size: 15px;
+                padding: 7px;
+                &:hover{
+                    background-color: #a9a9a9;
+                }
+            }
+        }
+    } 
+    .multiselect-selected-text{
+        color: rgba(0, 0, 0, 0.50);
+        font-family: Ubuntu;
+        font-size: 20px;
+        font-style: normal;
+        @extend .font-weight--300;
+        line-height: normal;
+    }
+    .nav-btn{
+        background-color: $color--btn;
+        padding: 11px;
+        border: 0px;
+        border-radius: 12px;
+        color: white;
+        @extend .ff--ubuntu;
+        @extend .font-weight--100;
+        text-decoration: none;
+    }
+}
+
+.date{
+    width: 192px;
+    height: 60px;
+    &.form-select{
+        background-size:20px 20px;
+        background-image: url('./assets/img/dashicons_calendar-alt.svg')
+    }
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    @extend .font-weight--300;
+    line-height: normal;
+}
+.navbar{
+    display: none;
+    &_img{
+        width: 100px;
+        height: 100px;
+    }
+    .navbar-toggler{
+        border:0px;
+        color: $color--fontC;
+    }
+    .nav-item{
+        a{
+            color: $color--fontC;
+            @extend .ff--ubuntu;
+        }
+    }
+    .nav-link{
+        .form-control{
+            &:focus{
+                border-color: transparent;
+                 box-shadow: 0 0 0 0.05rem rgb(223 170 91);
+            }
+        }
+    }
+}
+.homepage-top_banner{
+    position: relative;
+    &__img{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    .homepage_title{
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 400px;
+        left: 0;
+        right: 0;
+    }
+    h1{
+        color: #FFF;
+        font-family: Segoe UI;
+        font-size: 80px;
+        font-style: normal;
+        @extend .font-weight--700;
+        line-height: normal;
+    }
+    h3{
+        color: #FFF;
+        font-family: Ubuntu;
+        font-size: 24px;
+        font-style: normal;
+        @extend .font-weight--500;
+        line-height: normal;
+    }
+    .nav-btn{
+        transition: all .5s ease-in-out;
+        &:hover{
+            background-color: rgb(255, 72, 39);
+        }
+        &:active{
+            background-color: rgb(238, 223, 223);
+            color: #111;
+        }
+        background-color: $color--btn;
+        border-radius: 12px;
+        color: #FFF;
+        @extend .ff--ubuntu;
+        font-size: 24px;
+        font-style: normal;
+        @extend .font-weight--500;
+        line-height: normal;
+        margin: auto;
+        max-width: 371px;
+        padding: 24px 0;
+        width: 100%;
+    }
+    .container{
+        align-items: center;
+        text-align: center;
+        border-radius: 15px 15px 0px 0px;
+        &_text{
+            color: $color--fontC;
+            font-size: 45px;
+            font-style: normal;
+            @extend .font-weight--500;
+            line-height: normal;
+            @extend .ff--ubuntu;
+            &_menu{
+                display: flex;
+                padding-top: 10px;
+                flex-wrap: wrap;
+                &_item{
+                    padding: 40px;
+                    display: flex;
+                    flex-direction:column;
+                    color: $color--fontC;
+                    @extend .ff--ubuntu;
+                    font-size: 24px;
+                    font-style: normal;
+                    @extend .font-weight--400;
+                    line-height: normal;
+                    i{
+                        font-size: 60px;
+                        margin-bottom: 10px;
+                        color: $color--btn;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.box{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: 0.5s all;
+        img{
+            transition: 0.5s all;
+            &:hover{
+            transform: scale(1.2);
+            }
+        }
+
+    &__text__area{
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        &__title{
+            color: white;
+            @extend .ff--ubuntu;
+            font-size: 40px;
+            margin-bottom: 10px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        &__btn{ 
+        text-align: center;
+        background-color: $color--btn;
+        border: 0px;
+        height: 76px;
+        border-radius: 12px;
+        width: 244px;
+        margin: auto;
+        font-size: 24px;
+        padding-top: 25px;
+        margin-bottom: 20px;
+        @extend .ff--ubuntu;
+        @extend .font-weight--500;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        &:hover{
+            background-color: rgb(255, 72, 39);
+        }
+        &:active{
+            background-color: rgb(238, 223, 223);
+                 a{
+                color: #111;
+                     }
+        }
+            a{
+                 color: white;  
+            }
+        }
+    }
+}
+.ready{
+    padding-top: 5rem;
+    padding-bottom: 20rem;
+        &_btn{
+        width: 418px !important;
+        height: 76px !important;
+        background-color: $color--btn;
+        padding-top: 25px;
+        border: 0px;
+        border-radius: 12px;;
+        @extend .ff--ubuntu;
+        font-size: 24px;
+        font-style: normal;
+        @extend .font-weight--500;
+        line-height: normal;
+        margin: auto;
+        text-decoration: none;
+        &:hover{
+            background-color: rgb(255, 72, 39);
+        }
+        &_title{
+            color: white;
+            &:hover{
+                color: white;
+            }
+                &:active{
+                    background-color: rgb(238, 223, 223);
+                    color: black;
+            }
+        }
+        transition: all .5s ease-in-out;
+    }
+}
+.footer{
+    display: flex;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    background-color: #111;
+    width: 100%;
+    height: 300px;
+    @extend .ff--ubuntu;
+    &_title{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-left: 5rem;
+        margin-top: 2rem;
+        ul{
+            display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        }
+        li{
+            @extend .ff--ubuntu;
+            @extend .font-weight--400;
+            font-size: 24px;
+            font-style: normal;
+            line-height: normal;
+            &::after{
+                content: '';
+                width: 0%;
+                height: 2px;
+                margin-top: 5px;
+                background: $color--white;
+                display: block;
+                transition: 0.5s;
+                color: #FFF;
+            }
+            &:hover::after{
+                width: 100%;
+            }
+        }
+        &_img{
+            width: 154px;
+            height: 126px;
+            padding-bottom: 15px;
+        }
+        &_text{
+            @extend .ff--ubuntu;
+            @extend .font-weight--500;
+            font-size: 24px;
+            font-style: normal;
+            line-height: normal;
+            display: block;
+            position: relative;
+            bottom: 0px;
+            color: white;
+        }
+        &_text_2{
+            color: #fff;
+            @extend .ff--ubuntu;
+            @extend .font-weight--300;
+            font-size: 24px;
+            font-style: normal;
+            line-height: normal;
+        }
+    }
+    &_email{
+        width: 371px;
+        height: 75px;
+        margin-bottom: 10px;
+        color: rgba(0, 0, 0, 0.50);
+        @extend .ff--ubuntu;
+        font-size: 24px;
+        font-style: normal;
+        @extend .font-weight--300;
+        line-height: normal;
+
+        &:focus{
+            border-color: transparent;
+             box-shadow: 0 0 0 0.05rem rgb(223 170 91);
+        }
+        &_btn{
+            background-color: $color--btn;
+            border: 0px;
+            border-radius: 12px;
+            @extend .ff--ubuntu;
+            color: white;
+            @extend .font-weight--500;
+            font-size: 24px;
+            text-decoration: none;
+            max-width: 371px;
+            padding: 24px 0;
+            width: 100%;
+            transition: all .5s ease-in-out;
+            &_title{
+                color: #FFF;
+                @extend .ff--ubuntu;
+                @extend .font-weight--500;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+            &:hover{
+                background-color: rgb(255, 72, 39);
+                color: white;
+            }
+            &:active{
+                background-color: rgb(238, 223, 223);
+                a{
+                    color: #111;
+                }
+            }
+        }
+    }
+}
+.accordion{
+    display: none;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+      .accordion-item:first-of-type .accordion-button{
+        border-radius: 0px;
+    }
+    .accordion-item:last-of-type .accordion-button.collapsed{
+        border-radius: 0px;
+    }
+    &-body{
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width:1366px) { }
+@include media-breakpoint-down(lg)  {
+    .footer{
+        &_title{
+            &_img{
+                width: 100px;
+                height: 100px;
+            }
+            &_text{
+                font-size: 20px;
+                font-weight: 300;
+            }
+            &_text_2{
+                font-size: 20px;
+                font-weight: 200;
+            }
+        }
+        &_email{
+            width: 300px;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 10px;
+            &_btn{
+                height: 50px;
+                width: 300px;
+                margin: auto;
+                padding:5px;
+            }
+        }
+    }
+
+
+
+}
+
+@include media-breakpoint-down(md)  {
+    .ready{
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    .footer{
+        display: none;
+    }
+    .accordion{
+        display: block;
+        &-body {
+            li{
+                @extend .ff--ubuntu;
+                font-weight: 300;
+            }
+        }
+    }
+    .homepage-top_banner{
+        h1{
+            font-size: 30px;
+        }
+        h3{
+            font-size: 10px;
+        }
+         .nav-btn{
+            width: 200px;
+            padding: 10px;
+        }
+    }
+.box{
+    margin-bottom: 10px;
+    &__text__area__title{
+        font-size: 20px;
+    }
+    &__text__area__btn{
+        font-size: 15px;
+        width: 170px;
+        height: 50px;
+        padding-top: 20px;
+    }
+}
+
+}
+@include media-breakpoint-down(sm)  {
+.navbar{
+        display: block;
+    }
+    header{
+        display: none;
+    }
+    .content{
+        &_item{
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            a{
+                color: $color--fontC;
+                text-decoration: none;
+            }
+        }
+    }
+    .homepage-top_banner{
+        .container{
+            &_text{
+                &_menu{
+                    &_item{
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+  @include media-breakpoint-down(def) { }

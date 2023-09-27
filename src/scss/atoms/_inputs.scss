@@ -1,0 +1,16 @@
+input, textarea {
+    outline: none !important;
+}
+
+.form-select{
+    width: max-content;
+}
+
+.form-select:focus{
+    border-color: transparent;
+    box-shadow: 0 0 0 0.05rem rgb(223 170 91);
+}
+@include media-breakpoint-down(lg)  { }
+@include media-breakpoint-down(md)  { }
+@include media-breakpoint-down(sm)  { }
+@include media-breakpoint-down(def) { }

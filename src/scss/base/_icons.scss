@@ -1,0 +1,72 @@
+@mixin svg($name, $width, $height) {
+  width: $width;
+	height: $height;
+  background-image: url('assets/images/svg/#{$name}.svg');
+}
+
+@mixin extend-icon($name, $size, $color)
+{
+   @extend [class^="icon-"];
+   @extend [class*=" icon-"];
+   @extend .#{$name}:before;
+   color:$color;
+   font-size: $size;
+}
+
+[class^="svg-"], [class*=" svg-"] {
+  background-size: contain;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_search:before {
+  content: "\e900";
+  color: #dfaa5b;
+}
+.icon-icon_bx-taxi:before {
+  content: "\e901";
+  color: #dfaa5b;
+}
+.icon-icon_wifi-solid:before {
+  content: "\e902";
+  color: #dfaa5b;
+}
+.icon-icon-kitchensink:before {
+  content: "\e903";
+  color: #dfaa5b;
+}
+.icon-icon_pool .path1:before {
+  content: "\e904";
+  color: rgb(0, 0, 0);
+}
+.icon-icon_pool .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+}
+.icon-icon_pool .path3:before {
+  content: "\e906";
+  margin-left: -1em;
+}
+.icon-icon_pool .path4:before {
+  content: "\e907";
+  margin-left: -1em;
+}
+.icon-icon_fitness-centre-11:before {
+  content: "\e908";
+  color: #dfaa5b;
+}

@@ -1,0 +1,26 @@
+$color--white               : #FFFFFF;
+$color--black               : #000000;
+$color--fontC               :#957554;
+$color--btn                 :#DFAA5B;
+$color--Dgrey               :#111;
+
+
+.color--white               { color: $color--white!important; }
+.bg--white                  { background-color: $color--white!important; }
+.br--white                  { border-color: $color--white!important; }
+
+.color--black               { color: $color--black!important; }
+.bg--black                  { background-color: $color--black!important; }
+.br--black                  { border-color: $color--black!important; }
+
+.color--fontC               { color: $color--fontC!important; }
+.bg--fontC                  { background-color: $color--fontC!important; }
+.br--fontC                  { border-color: $color--fontC!important; }
+
+.color--btn               { color: $color--btn!important; }
+.bg--btn                 { background-color: $color--btn!important; }
+.br--btn                  { border-color: $color--btn!important; }
+
+.color--Dgrey               { color: $color--Dgrey!important; }
+.bg--Dgrey              { background-color: $color--Dgrey!important; }
+.br--Dgrey                  { border-color: $color--Dgrey!important; }
